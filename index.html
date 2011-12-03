@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Body</title>
+  <title>Password Generator</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
 	<meta charset="utf-8">
@@ -25,7 +25,7 @@
   <body onload="init()">
     <form name="f" method="POST" onSubmit="f.password.value = b64_sha1(f.master.value+':'+ f.site.value).substr(0,8) + '1a'; f.password.focus(); f.password.select(); return false;">
       <fieldset>
-        <legend>Password generator</legend>
+        <legend>Password Generator</legend>
         
         <div class="clearfix">
           <label for="master">Your master password</label>
