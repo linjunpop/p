@@ -15,14 +15,8 @@
 	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css">	
 
 	<script type="text/javascript" charset="utf-8" src="main.js"></script>
-  <script type="text/javascript">
-  	function init()
-  	{		
-  	  document.f.master.focus()
-  	}
-  </script>
   </head>
-  <body onload="init()">
+  <body>
     <form name="f" method="POST" onSubmit="f.password.value = b64_sha1(f.master.value+':'+ f.site.value).substr(0,8) + '1a'; f.password.focus(); f.password.select(); return false;">
       <fieldset>
         <legend>Password Generator</legend>
