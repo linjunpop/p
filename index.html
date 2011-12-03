@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Body</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	-->
+
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css">	
+
+	<script type="text/javascript" charset="utf-8" src="main.js"></script>
+  <script type="text/javascript">
+  	function init()
+  	{		
+  	  document.f.master.focus()
+  	}
+  </script>
+  </head>
+  <body onload="init()">
+    <form name="f" method="POST" onSubmit="f.password.value = b64_sha1(f.master.value+':'+ f.site.value).substr(0,8) + '1a'; f.password.focus(); f.password.select(); return false;">
+      <fieldset>
+        <legend>Password generator</legend>
+        
+        <div class="clearfix">
+          <label for="master">Your master password</label>
+          <div class="input">
+            <input id="master" name="master" type="password" placeholder="master password"/>
+          </div>
+        </div>
+
+        <div class="clearfix">
+          <label for="site">Site name</label>
+          <div class="input">
+            <input id="site" name="site" autocapitalize="off" placeholder="Site Name"/>
+          </div>
+        </div>
+    
+        <div class="clearfix">
+          <label for="password">Password</label>
+          <div class="input">
+            <input id="password" name="password" />
+          </div>
+        </div>
+    
+        <div class="actions">
+          <input type="submit" class="btn primary" value="Generate" />
+          <input type="reset" class="btn" value="Reset" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
