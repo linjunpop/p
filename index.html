@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html manifest="app.manifest">
   <head>
-  <title>Password Generator</title>
+    <title>Password Generator</title>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-	<meta charset="utf-8">
-	
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
   
-  <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png" />
-  
-  <link rel="stylesheet" href="reset.css" >
-	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css">	
-
-	<script type="text/javascript" charset="utf-8" src="main.js"></script>
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png" />
+    <link rel="stylesheet" href="reset.css" >
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css">	
+    <link rel="author" href="humans.txt" />
+    
+    <script type="text/javascript" charset="utf-8" src="main.js"></script>
   </head>
   <body>
     <form name="f" method="POST" onSubmit="f.password.value = b64_sha1(f.master.value+':'+ f.site.value).substr(0,8) + '1a'; f.password.focus(); f.password.select(); return false;">
