@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# V2
+# V3
 index.html
 main.js
 reset.css
@@ -7,3 +7,4 @@ iphone.css
 touch-icon-ipad.png
 touch-icon-iphone.png
 touch-icon-iphone4.png
+humans.txt
